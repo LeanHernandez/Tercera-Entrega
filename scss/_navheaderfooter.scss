@@ -1,0 +1,72 @@
+
+/* Mixin */
+@mixin colorcitos($background-color, $color) {
+    background-color:$background-color;
+    color: $color;
+}
+
+/* Nav y Header */
+
+.header {
+    @include colorcitos(black, white);
+    grid-area: titulo;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 25px;
+}
+
+.nav {
+    @include colorcitos(black, white);
+    grid-area: barra;
+    font-size: 20px;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__item {
+    list-style: none;
+    text-decoration: none;
+}
+/*extend*/
+.nav__link {
+@extend .nav__item;
+    color: white;
+}
+
+
+/* Animación Appear Header*/
+
+.anim-appear {
+    animation-name: appear;
+    animation-timing-function: ease;
+    animation-duration: 1.2s;
+    animation-delay: 0s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    grid-area: pie;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+}
+
+.footer__icono {
+    padding-top: 3px;
+}

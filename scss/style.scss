@@ -1,0 +1,442 @@
+@import "_navheaderfooter";
+
+$bordegris: rgb(85, 84, 84);
+$verdecito: rgb(211, 251, 216);
+
+
+/* Index */
+
+.cuerpo {
+    background-image: url(../img/elefantes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "barra barra"
+    "home tiempo"
+    "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 5vh 90vh 4vh;
+}
+
+
+.bienvenida {
+    grid-area: home;
+}
+
+.horarios {
+    grid-area: tiempo;
+}
+
+.indtits {
+    text-decoration: underline;
+    padding-bottom: 2rem;
+}
+
+
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+.bienvenida__img {
+    max-width: 100%
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(238, 148, 148, 0.521);;
+
+}
+
+
+
+/* Servicios */
+
+.cuerpo-serv {
+    background-image: url(../img/elefantes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "barra barra"
+    "titser titser"
+    "serv serv"
+    "pie pie";
+    
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 5rem 5vh 100vh 4vh;
+    
+}
+
+.servicios__titulo {
+    color: white;
+    grid-area: titser;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+.servicios {
+    display: grid;
+    grid-area: serv;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.servicios__descrip {
+    border-top: 2px solid $bordegris;
+    border-bottom: 2px solid $bordegris;
+}
+
+.servicios__img {
+    border: 2px solid #EC87E4;
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* MAP */
+
+$colors: (
+ anteriores: #55acee,
+ nuevos:  #3a5795,
+ obsoletos: #C25E30
+);
+
+@each $name-color, $bgcolor in $colors {
+    .bg--#{$name-color} {
+        background-color: $bgcolor;
+    }
+ }
+ 
+
+
+.servicios__diferentes {
+    border: 2px solid $bordegris;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    background-color: $verdecito;
+    transition: transform 1s, background-color 1s; 
+}
+
+.servicios__diferentes--scale {
+    &:hover {
+    transform: scale(130%);
+    background-color: $verdecito;
+}
+}
+
+
+
+
+/* Galería */
+
+.cuerpo-gal {
+    background-image: url(../img/elefantes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "barra barra"
+    "titgal titgal"
+    "img img"
+    "loc loc"
+    "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 5vh 5vh 100vh 100vh 4vh;
+}
+
+.anteriores__titulo {
+    grid-area: titgal;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+}
+
+.anteriores__img {
+     border: 2px solid rgb(177, 33, 146);
+}
+
+.anteriores {
+    margin-top: 1rem;
+    grid-area: img;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1rem;
+
+}
+
+.local__titulo {
+    font-size: 2rem;
+    text-decoration: underline;
+    color: white;
+}
+
+.local {
+    grid-area: loc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem ;
+    margin-top: 2rem;
+}
+
+/* Animación Imágenes */
+
+.anteriores__appear1 {
+    animation-name: primer;
+    animation-timing-function: ease;
+    animation-duration: 1.2s;
+    animation-delay: 0;
+}
+
+.anteriores__appear2 {
+    animation-name: segun;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-delay: 0;
+}
+
+.anteriores__appear3 {
+    animation-name: tercer;
+    animation-timing-function: ease;
+    animation-duration: 6s;
+    animation-delay: 0;
+}
+
+.anteriores__appear4 {
+    animation-name: cuar;
+    animation-timing-function: ease;
+    animation-duration: 6s;
+    animation-delay: 0;
+}
+
+
+
+@keyframes primer{
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes segun{
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes tercer{
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes cuar{
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+/* Nosotros */
+
+.cuerpo-nos {
+    background-image: url(../img/elefantes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "barra barra"
+    "quien quien"
+    "nues nues"
+    "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 5vh 50vh 50vh 4vh;
+}
+
+.quienes__texto {
+    text-align: end;
+}
+
+.quienes__titulo {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+
+.quienes {
+    background-color: rgba(255, 255, 255, 0.637);
+    grid-area: quien;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nuestra {
+    background-color: rgba(238, 148, 148, 0.521);
+    grid-area: nues;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nuestra__titulo {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Contacto */ 
+
+.cuerpo-con {
+    background-image: url(../img/elefantes.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "barra barra barra barra"
+    "titdat titdat titdat titdat"
+    "data data data data"
+    "map map map formu"
+    "pie pie pie pie";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10vh 5vh 5vh 7vh 80vh 4vh;
+}
+
+.datos {
+    grid-area: data;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    align-items: center;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+.datos__tit {
+    grid-area: titdat;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+.mapa {
+    grid-area: map;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.contacto {
+    grid-area: formu;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.637);
+    height: 85%;
+    margin-right: 3rem;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries Servicios */
+@import "_queries";

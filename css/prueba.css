@@ -1,0 +1,518 @@
+@charset "UTF-8";
+/* Mixin */
+/* Nav y Header */
+.header {
+  background-color: black;
+  color: white;
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; }
+
+.nav {
+  background-color: black;
+  color: white;
+  grid-area: barra;
+  font-size: 20px; }
+
+.nav__links {
+  display: flex;
+  justify-content: space-around; }
+
+.nav__item, .nav__link {
+  list-style: none;
+  text-decoration: none; }
+
+/*extend*/
+.nav__link {
+  color: white; }
+
+/* Animación Appear Header*/
+.anim-appear {
+  animation-name: appear;
+  animation-timing-function: ease;
+  animation-duration: 1.2s;
+  animation-delay: 0s; }
+
+@keyframes appear {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/* Footer */
+.footer {
+  grid-area: pie;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center; }
+
+.footer__icono {
+  padding-top: 3px; }
+
+/* Index */
+.cuerpo {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo" "barra barra" "home tiempo" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh 5vh 90vh 4vh; }
+
+.bienvenida {
+  grid-area: home; }
+
+.horarios {
+  grid-area: tiempo; }
+
+.indtits {
+  text-decoration: underline;
+  padding-bottom: 2rem; }
+
+.bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.637); }
+
+.bienvenida__img {
+  max-width: 100%; }
+
+.horarios {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(238, 148, 148, 0.521); }
+
+/* Servicios */
+.cuerpo-serv {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo" "barra barra" "titser titser" "serv serv" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh 5rem 5vh 100vh 4vh; }
+
+.servicios__titulo {
+  color: white;
+  grid-area: titser;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center; }
+
+.servicios {
+  display: grid;
+  grid-area: serv;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.servicios__descrip {
+  border-top: 2px solid #555454;
+  border-bottom: 2px solid #555454; }
+
+.servicios__img {
+  border: 2px solid #EC87E4;
+  max-width: 100%;
+  max-height: auto; }
+
+/* MAP */
+.bg--anteriores {
+  background-color: #55acee; }
+
+.bg--nuevos {
+  background-color: #3a5795; }
+
+.bg--obsoletos {
+  background-color: #C25E30; }
+
+.servicios__diferentes {
+  border: 2px solid #555454;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 25rem;
+  background-color: #d3fbd8;
+  transition: transform 1s, background-color 1s; }
+
+.servicios__diferentes--scale:hover {
+  transform: scale(130%);
+  background-color: #d3fbd8; }
+
+/* Galería */
+.cuerpo-gal {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo" "barra barra" "titgal titgal" "img img" "loc loc" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh 5vh 5vh 100vh 100vh 4vh; }
+
+.anteriores__titulo {
+  grid-area: titgal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white;
+  text-align: center; }
+
+.anteriores__img {
+  border: 2px solid #b12192; }
+
+.anteriores {
+  margin-top: 1rem;
+  grid-area: img;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1rem; }
+
+.local__titulo {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white; }
+
+.local {
+  grid-area: loc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+/* Animación Imágenes */
+.anteriores__appear1 {
+  animation-name: primer;
+  animation-timing-function: ease;
+  animation-duration: 1.2s;
+  animation-delay: 0; }
+
+.anteriores__appear2 {
+  animation-name: segun;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-delay: 0; }
+
+.anteriores__appear3 {
+  animation-name: tercer;
+  animation-timing-function: ease;
+  animation-duration: 6s;
+  animation-delay: 0; }
+
+.anteriores__appear4 {
+  animation-name: cuar;
+  animation-timing-function: ease;
+  animation-duration: 6s;
+  animation-delay: 0; }
+
+@keyframes primer {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes segun {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes tercer {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes cuar {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/* Nosotros */
+.cuerpo-nos {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo" "barra barra" "quien quien" "nues nues" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh 5vh 50vh 50vh 4vh; }
+
+.quienes__texto {
+  text-align: end; }
+
+.quienes__titulo {
+  font-size: 2rem;
+  text-decoration: underline; }
+
+.quienes {
+  background-color: rgba(255, 255, 255, 0.637);
+  grid-area: quien;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.nuestra {
+  background-color: rgba(238, 148, 148, 0.521);
+  grid-area: nues;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.nuestra__titulo {
+  font-size: 2rem;
+  text-decoration: underline; }
+
+/* Contacto */
+.cuerpo-con {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo titulo titulo" "barra barra barra barra" "titdat titdat titdat titdat" "data data data data" "map map map formu" "pie pie pie pie";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 10vh 5vh 5vh 7vh 80vh 4vh; }
+
+.datos {
+  grid-area: data;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  align-items: center;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.637); }
+
+.datos__tit {
+  grid-area: titdat;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.637); }
+
+.mapa {
+  grid-area: map;
+  text-align: center;
+  align-content: center;
+  justify-content: center; }
+
+.contacto {
+  grid-area: formu;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.637);
+  height: 85%;
+  margin-right: 3rem;
+  margin-top: 3rem; }
+
+/* Media Queries Servicios */
+/* MEDIA QUERIES */
+/* Index */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo {
+    grid-template-areas: "titulo titulo" "barra barra" "home home" "tiempo tiempo" "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10vh 18vh 86vh 50vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cuerpo {
+    grid-template-areas: "titulo titulo" "barra barra" "home home" "tiempo tiempo" "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15vh 5vh 85vh 70vh 4vh; } }
+
+/* Servicios */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo-serv {
+    grid-template-rows: 10vh 20vh 15vh 500vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cuerpo-serv {
+    grid-template-rows: 10vh 10vh 15vh 300vh 4vh;
+    grid-gap: 0; }
+  .servicios {
+    height: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
+  .servicios__diferentes {
+    height: 80%; } }
+
+/* Galería */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo-gal {
+    grid-template-rows: 10vh 21vh 15vh 400vh 80vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .anteriores {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.8rem; }
+  .anteriores__img {
+    max-width: 100%; }
+  .local__vid {
+    max-width: 100%; }
+  .local__img {
+    width: 100%; }
+  .local__titulo {
+    margin-bottom: 0.8rem; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cuerpo-gal {
+    grid-template-rows: 11vh 9vh 5vh 150vh 80vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .anteriores {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px; }
+  .anteriores__img {
+    max-width: 100%; }
+  .local__vid {
+    max-width: 100%; }
+  .local__img {
+    width: 100%; }
+  .local__titulo {
+    margin-bottom: 0.8rem; } }
+
+/* Nosotros */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo-nos {
+    grid-template-rows: 10vh 18vh 120vh 120vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .quienes__img {
+    max-width: 30%; } }
+
+@media screen and (min-width: 768px) and (max-width: 1328px) {
+  .cuerpo-nos {
+    grid-template-rows: 10vh 18vh 90vh 90vh 4vh; }
+  .quienes__img {
+    max-width: 30%; } }
+
+/* Contacto */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo-con {
+    grid-template-areas: "titulo titulo titulo titulo" "barra barra barra barra" "titdat titdat titdat titdat" "data data data data" "map map map map" "formu formu formu formu" "pie pie pie pie";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10vh 18vh 15vh 10vh 50vh 100vh 4vh; }
+  .mapa__g {
+    max-width: 70%;
+    max-height: 80%; }
+  .contacto {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .mapa {
+    margin-top: 3rem; } }
+
+@media screen and (min-width: 768px) and (max-width: 1629px) {
+  .cuerpo-con {
+    grid-template-areas: "titulo titulo titulo titulo" "barra barra barra barra" "titdat titdat titdat titdat" "data data data data" "map map map map" "formu formu formu formu" "pie pie pie pie";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10vh 5vh 15vh 10vh 50vh 100vh 4vh; }
+  .mapa__g {
+    max-width: 70%;
+    max-height: 80%; }
+  .contacto {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; }
+  .nav__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .mapa {
+    margin-top: 3rem; } }
